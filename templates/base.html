@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="ext/html; charset=utf-8" />
+    <title></title>
+
+    <!--css-->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/static/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="/static/css/style.css" rel="stylesheet" />
+    <link href="/static/css/style_responsive.css" rel="stylesheet" />
+    <link href="/static/css/style_default.css" rel="stylesheet" id="style_color" />
+
+    <!--Jquery-->
+    <script src="/static/js/jquery-1.9.1.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/bootstrap-datepicker.js"></script>
+    <script type='text/javascript'>
+        jQuery(function() {
+            jQuery('.datepicker').each(function(index, element) {
+
+                jQuery(this).datepicker();
+            });
+        });
+
+    </script>
+</head>
+
+<body class="fixed-top">
+<div id="header" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="/">数据采集系统</a>
+            <div class="top-nav">
+
+                <ul class="nav pull-right" id="top_menu">
+                    <li class="divider-vertical hidden-phone hidden-tablet"></li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-wrench icon-white"></i>系统设置 <b class="caret"></b> </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="icon-cogs"></i>系统设置</a></li>
+                            <li><a href="#"><i class="icon-pushpin"></i> Shortcuts</a></li>
+                            <li><a href="#"><i class="icon-trash"></i> Trash</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider-vertical hidden-phone hidden-tablet"></li>
+                    <li class="dropdown"> <a href="#" > <i class="icon-user icon-white"></i> </a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="container" class="row-fluid">
+    <div id="sidebar" class="nav-collapse collapse">
+
+        <ul>
+            <li class="has-sub active"> <a href="/air_quality/list" > <i class="icon-globe"></i>空气质量</span> </a>
+
+            </li>
+            <li class="has-sub"> <a href="/water_quality/list" > <i class="icon-tint"></i>水文数据</a>
+            </li>
+        </ul>
+    </div>
+    <div id="body">
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+</div>
+<div id="footer"> 2013 &copy; greenbase. All Right Reserved
+    <div class="span pull-right"> <span class="go-top"><a href="#"><i class="icon-arrow-up"></i></a></span> </div>
+</div>
+</body>
+</html>
