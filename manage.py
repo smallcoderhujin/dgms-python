@@ -10,18 +10,7 @@ if __name__ == "__main__":
     execute_from_command_line(sys.argv)
     
     
-    
-    
-from setuptools import setup
-from setuptools import find_packages
+from qga_proxy.worker import start
 
-setup(
-    name="qga-proxy",
-    version="0.1",
-    url='http://www.chinac.com',
-    author='hujin',
-    author_email='hujin@chinac.com',
-    description='Qemu-guest-agent proxy',
-    license='GPL',
-    packages=find_packages(),
-)
+if __name__ == '__main__':
+    start()
